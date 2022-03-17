@@ -1,0 +1,121 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background: linear-gradient(270deg, #cfc39c, #6d3526);
+    color: white;
+    min-height: 100vh;   
+}
+header{
+    /*font-size: 1.5rem;*/
+    padding: 0.5rem;
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+padding: 0.5rem;
+font-size: 1.5rem;
+background: white;
+border: none;
+}
+form button{
+    color: #6d3526;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+form button:hover{
+color: white;
+background: #6d3526;
+}
+.activity-containor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activity-list{
+list-style: none;
+min-width: 30%;
+}
+.new-activity-div{
+    background: white;
+    margin: 0.5rem;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.new-activity-div li{
+    flex: 1;
+}
+.completed-button, .trash-button{
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    background: #6d3526;
+}
+.completed-button{
+    background: green;
+}
+.completed-button:hover{
+    background: rgb(33, 160, 33);
+}
+.trash-button:hover{
+    background: white;
+    color: #6d3526;
+}
+.new-activity-li{
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none; /* disbles the two buttons from reacting to any events and they appear as if they don't exist*/
+}
+.activity-completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg) ;
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    
+}
+select{
+   color: #6d3526;
+   width: 10rem; 
+   cursor: pointer;
+   padding: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #6d3526;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: white;
+    color: #6d3526;
+}
